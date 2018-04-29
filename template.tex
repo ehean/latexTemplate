@@ -1,0 +1,80 @@
+% This is a simple template file that provides some example Latex syntax,
+% useful for any generic HW assignment, paper, or report
+%
+% Use the percent symbol to write comments
+
+% sets document class (report is standard)
+\documentclass[11pt]{report}
+
+% sets the document to be left-aligned, with some justificatoin included 
+% (in other words, the Latex will avoid hyphenating words most of the time,
+% but will do so on occasion in order to avoid hideous gaps on the right
+% side of the text)
+ \raggedright
+
+% geometry package allows us to control the page size, margins, layout, etc.
+\usepackage[margin=1in]{geometry}
+
+% comment package allows multi-line comments
+\usepackage{comment}
+
+% amsmath package allows for aligning equations across mutliple lines
+\usepackage{amsmath}
+
+% graphicx package allows for figures
+\usepackage{graphicx}
+
+% sets paragraph indent
+\setlength\parindent{24pt}
+\begin{document}
+
+
+\title{\bf TITLE}
+\author{AUTHOR NAME}
+\date{\today}
+\maketitle
+
+
+\noindent
+Press Ctrl + T to run typeset and preview the document.
+\newline
+\newline
+
+\noindent
+Add an inline equation by wrapping it around a pair of \$ symbols: $f(x) = \frac{g(x)}{h(x)}$
+\newline
+\newline
+
+\noindent
+Here is an example of a left aligned set of equations:
+
+\begin{flalign*}
+f(n) &= a*n^{2} + b*n + c &\\
+a &= 1.197e-07 &\\
+b &= -.001088 &\\
+c &= 6.55
+\end{flalign*}
+
+
+Here is an example of a simple table. `l` is left-aligned (write `c` or `r` for center- or right-aligned). Columns are separated by a \&. Two forward slashes indicate a new row.
+
+\begin{center}
+\begin{tabular}{ l l l }
+Steps & Description & Complexity \\
+1 & Lorem ipsum & $\Theta(n^{2}))$ \\
+2 & dolor sit amet & $\Theta(n!)$ \\
+3 & consectetur adipiscing elit. & $\Theta(log(n))$ \\
+4 & Donec varius consectetur  & $\Theta(1)$ \\
+5 & Quisque tincidunt risus & $\Theta(1)$  
+\end{tabular}
+\end{center}
+
+
+Here is an example of a figure. You must export a .eps from either Matlab or Excel. Creating an EPS is much easier in Matlab than in Excel. Save the file to the same directory as your .tex file and copy the file name (without the file extension) into the `includegraphics' tag:
+\begin{figure}[h]
+\centering
+\includegraphics[width=5.04in]{example_figure}
+\caption{figure caption}
+\end{figure}
+
+\end{document}
